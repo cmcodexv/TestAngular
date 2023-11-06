@@ -1,0 +1,51 @@
+<div class="row mt-5">
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8 col-xs-12 mb-5" style="margin: auto;">
+        <!-- TITL -->
+        <div class="text-center mt-4">
+            <h5 class="lbl-title-dash">Dashboard</h5>
+        </div>
+        <!-- CARD -->
+        <div class="card mt-4">
+            <div class="card-head">
+                <h5 class="lbl-title">SIGN IN</h5>
+            </div>
+            <div class="card-body">
+                <!-- Forms -->
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <!-- EMAIL -->
+                    <div class="mt-2">
+                        <label for="" class="lbl-email">EMAIL</label>
+                        <input type="text" class="form-control" placeholder="Email" formControlName="email">
+                        <span *ngIf="validateInput('email')">
+                            Required field
+                        </span>
+                    </div>
+                    <!-- PASSWORD -->
+                    <div class="mt-2">
+                        <label for="" class="lbl-email">PASSWORD</label>
+                        <button type="button" class="btn btn-show-password" (click)="showPassword()">
+                            <i [ngClass]="iconClass" aria-hidden="true"></i>
+                        </button>
+                        <input [type]="inputPass" class="form-control" placeholder="Password" formControlName="password">
+                        <span *ngIf="validateInput('password')">
+                            Required field
+                        </span>
+                        <span *ngIf="validateMinLength('email')">
+                            Min length 4
+                        </span>
+                    </div>
+                    <br>
+                    <!-- BTN -->
+                    <button class="btn btn-continue" [disabled]="loginForm.invalid">
+                        Sign in
+                    </button>
+                    <br>
+                </form>
+                <!-- End -->
+                <hr>
+            </div>
+        </div>
+        <!-- END CARD -->
+     
+    </div>
+</div>

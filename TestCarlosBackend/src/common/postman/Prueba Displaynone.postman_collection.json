@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "9803fb3b-8764-446a-80ae-b57dacd53bb5",
+		"name": "Prueba Displaynone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25576760"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@invent.com\",\n    \"password\": \"123456\"    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/identity/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"identity",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@sifac.com\",\n    \"password\": \"12345\"    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/user/list",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Shipping",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"Postman st\",\n    \"zip_code\": 24,\n    \"remitent\": \"Juan Ejemplo\",\n    \"addressee\": \"Juan Remitente\",\n    \"weight\": 6.7    \n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/shipping/create",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"shipping",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShippingList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@sifac.com\",\n    \"password\": \"12345\"    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/shipping/list",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"shipping",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Shipping",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkNhcmxvcyIsInN1cm5hbWUiOiJNYXJhZGlhZ2EiLCJlbWFpbCI6ImFkbWluQGludmVudC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTcxMzE1MjYsImV4cCI6MTY5NzE1NjcyNn0.XqdHzAJpiPDU45W9iKg0tvmIAdb-EoU6RaFGK7Gxvl4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/shipping/6",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"shipping",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/check",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PackageTypes List",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"admin@sifac.com\",\n    \"password\": \"12345\"    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/packageTypes/list",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"packageTypes",
+						"list"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwibmFtZSI6IkNhcmxvcyIsInN1cm5hbWUiOiJNYXJhZGlhZ2EiLCJlbWFpbCI6ImFkbWluQGludmVudC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2OTcyOTI1MzIsImV4cCI6MTY5NzMxNzczMn0.aXgCVpSD9uBLvzQXMXtSLaNTlRuh_D6_eJhi6OGQN-Q"
+		}
+	]
+}

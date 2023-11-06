@@ -1,0 +1,65 @@
+.card {
+    border: none;
+}
+
+.form-group-ra {
+    position: relative;
+}
+  
+input, select, textarea {
+  /* Remove First */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none !important;
+  border: 0;
+
+  /* Add Custom */
+  text-align: center;
+  background: #f6f7fba3 0% 0% no-repeat padding-box
+}
+.form-group-ra 
+input,
+textarea{
+  /*RemoveFirst*/-webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none !important;
+  /*AddCustom*/padding: 11px 0px 12px 5px;
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  outline: none;
+  border: #B4B3B3 1px solid;
+  border-color: #B4B3B3 !important;
+  border-radius: 10px;
+  font-size: 11px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.form-group-ra i {
+  position: absolute;
+  float: right;
+  top: 8px;
+  right: 15px;
+  font-size: 16px;
+}
+
+.form-label{
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-secondary {
+  background: #6C55A4 !important;
+  border: 1px solid #6C55A4 !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }

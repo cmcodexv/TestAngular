@@ -1,0 +1,90 @@
+
+.row {
+    margin: auto;
+}
+
+.lbl-title-dash {
+    margin-top: 20px;
+    text-align: center;
+    color: #9F9F9F;
+    opacity: 1;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.card {
+    border: none;
+    padding: 20px;
+
+    .lbl-title {
+        margin-top: 20px;
+        text-align: center;
+        color: #495057;
+        opacity: 1;
+        font-size: 22px;
+        font-weight: 900;
+    }
+
+    .lbl-email {
+        font-weight: 700;
+        // letter-spacing: 0px;
+        color: #B4B3B3;
+        opacity: 1;
+    }
+
+    input {
+        margin-top: 5px;
+        font-size: 14px;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border: 1px solid #9F9F9F;
+        max-height: 50px;
+    }
+
+    .btn-continue {
+        color: #fff;
+        width: 100%;
+        background: #0EA7D5 0% 0% no-repeat padding-box;
+        border-radius: 6px;
+        opacity: 1;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .lbl-divisor {
+        color: #A3A3A3;
+        position: absolute;
+        top: 10px;
+    }
+
+    .btn-show-password {
+        position: absolute;
+        right: 50px;
+        margin-top: 34px;
+    }
+}
+.btn-create-acount {
+    width: 100%;
+    background: #FFD200;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.actions {
+    
+    text-align: center;
+    // margin-top: 10px;
+    button {
+        font-size: 13px;
+        color: #0EA7D5 ;
+        font-weight: 700;
+    }
+}

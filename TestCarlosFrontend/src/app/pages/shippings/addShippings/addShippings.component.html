@@ -1,0 +1,76 @@
+<div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="modal-body">
+                <div class="text-center">
+                    <h4 class="modal-title w-100">Add Shipping</h4>
+                </div>
+                <br>
+                <div class="card-body" style="padding-top: 0px;">
+                    <form [formGroup]="shippingFom" (submit)="onSubmit()">
+                        <div class="row mt-2">
+                            <div class="col-12">
+                                <div class="form-group-ra">
+                                    <label class="form-label">Address</label>
+                                    <input id="address" name="address" maxlength="100" type="text" formControlName="address" placeholder="Enter address">
+                                </div>
+                                <div *ngIf="validateInput('address')">
+                                    <small class="text-danger">Required field</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-6">
+                                <div class="form-group-ra">
+                                    <label class="form-label">Remitent</label>
+                                    <input id="remitent" name="remitent" maxlength="50" type="text" formControlName="remitent" placeholder="Enter remitent">
+                                </div>
+                                <div *ngIf="validateInput('remitent')">
+                                    <small class="text-danger">Required field</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group-ra">
+                                    <label class="form-label">Addressee</label>
+                                    <input id="addressee" name="addressee" maxlength="50" type="text" formControlName="addressee" placeholder="Enter addressee">
+                                </div>
+                                <div *ngIf="validateInput('addressee')">
+                                    <small class="text-danger">Required field</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-6">
+                                <div class="form-group-ra">
+                                    <label class="form-label">Zip Code</label>
+                                    <input id="zip_code" name="zip_code" min="1" type="number" formControlName="zip_code" placeholder="Enter zip code" onKeyPress="if(this.value.length==2) return false;">
+                                </div>
+                                <div *ngIf="validateInput('zip_code')">
+                                    <small class="text-danger">Required field</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group-ra">
+                                    <label class="form-label">Weight (Kg)</label>
+                                    <input id="weight" name="weight" min="1" type="number" formControlName="weight" placeholder="Enter weight" onKeyPress="if(this.value.length==6) return false;">
+                                </div>
+                                <div *ngIf="validateInput('weight')">
+                                    <small class="text-danger">Required field</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Buttons -->
+                        <div class="text-center mt-4">
+                            <button class="btn" id="btn-remove-modal" type="button" (click)="onCloseModal()">
+                                Cancel
+                            </button>
+                            <button class="btn btn-secondary" [disabled]="shippingFom.invalid">
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

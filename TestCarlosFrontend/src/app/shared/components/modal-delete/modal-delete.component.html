@@ -1,0 +1,18 @@
+
+<div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+			<div class="modal-body">
+                <div class="text-center">
+                    <h4 class="modal-title w-100">Are you sure?</h4>	
+                </div>
+                <br>
+				<p class="text-center">{{message}}</p>
+			</div>
+			<div class="modal-footer justify-content-center">
+				<a type="button" id="btn-remove-modal" class="btn btn-secondary" (click)="onCloseModal()">Cancel</a>
+				<button type="button" class="btn btn-danger" (click)="onDelete()">{{btnYes}}</button>
+			</div>
+        </div>
+    </div>
+</div>
